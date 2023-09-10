@@ -1,0 +1,36 @@
+name: exercise2
+on: push
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: first step checkout code
+              uses: actions/checkout@v3
+            - name: install dependencies
+              run: npm ci
+            - name: Lint
+              run: npm run lint
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: first step checkout code
+              uses: actions/checkout@v3
+            - name: install dependencies
+              run: npm ci
+            - name: test code
+              run: npm run test
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: first step checkout code
+              uses: actions/checkout@v3
+            - name: install dependencies
+              run: npm ci
+            - name: Lint
+              run: npm run lint
+            - name: test code
+              run: npm run test              
+            - name: build code
+              run: npm run build
+            - name: deploy code
+              run: echo "deploying code"
