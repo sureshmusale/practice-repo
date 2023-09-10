@@ -7,7 +7,7 @@ jobs:
             - name: first step checkout code
               uses: actions/checkout@v3
             - name: install dependencies
-              run: npn ci
+              run: npm ci
             - name: Lint
               run: npm run lint
             - name: test code
